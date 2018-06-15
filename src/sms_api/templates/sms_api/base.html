@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+<head>
+    <meta charset="UTF-8">
+    <script
+		src="http://code.jquery.com/jquery-3.3.1.min.js"
+		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+		crossorigin="anonymous">
+		</script>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+		{% block loadhead %}
+
+	{% endblock %}
+
+
+
+       	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+        <title>{% block title %}{% endblock title %}</title>
+</head>
+<body  style="height: 100%; margin: 0">
+
+
+<ul class="nav nav-tabs">
+  <li role="presentation" class="active"><a href="{% url 'sms_api:api-dashboard'%}">Sms Log</a></li>
+  <li role="presentation"><a href="{% url 'sms_api:api-chart'%}"> Chart </a></li>
+  <li role="presentation"><a href="{% url 'sms_api:api-echart'%}"> EChart </a></li>
+  <li role="presentation"><a href="{% url 'sms_api:api-chart-data'%}"> View Api data </a></li>
+</ul>
+
+{% block content %}
+
+{% endblock %}
+
+
+</body>
+</html>

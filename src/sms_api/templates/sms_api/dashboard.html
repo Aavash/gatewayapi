@@ -1,0 +1,45 @@
+{% extends "sms_api/base.html" %}
+{% load static %}
+	{% block title %} Dashboard {% endblock title %}
+
+{% block loadhead %}
+	        <link rel="stylesheet"  href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css"> </link>
+        <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"> </script>
+{% endblock %}
+
+
+
+
+	{% block content %}
+
+<div class="container">
+	<br> <br>
+	    <a href="{% url 'sms_api:api-dashboard'%}" id="refresh" > <button > Refresh </button> </a>
+	    <a id="prev" > <button >Prev</button> </a>
+	    <a id="next" > <button >Next</button> </a>
+	<br> <br>
+
+	<table id="smsInfo" class="display" style="width:100% border="1" ">
+			<thead>
+				<tr>
+					<th>Id</th>
+					<th>Phone No.</th>
+					<th>Message</th>
+					<th>Sent Date</th>
+				</tr>
+			</thead>
+
+	</table>
+
+</div>
+
+<script type="text/javascript" src="{% static 'sms_api/js/dashboard.js' %}"></script>
+
+	{% endblock %}
+        <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"> </script>
+
+
+
+{% block extrascript %}
+
+{% endblock %}

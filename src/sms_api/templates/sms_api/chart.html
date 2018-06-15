@@ -1,0 +1,21 @@
+{% extends "sms_api/base.html" %}
+{% load static %}
+	{% block title %} Chart {% endblock title %}
+
+{% block loadhead %}
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+
+{% endblock %}
+
+	{% block content %}
+<div class="container">
+<h1>Here's your chart</h1>
+        <canvas id="myChart"></canvas>
+    <script type="text/javascript" src="{% static 'sms_api/js/chart.js' %}"></script>
+</div>
+	{% endblock %}
+
+
+{% block extrascript %}
+
+{% endblock %}
